@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Goudkoorts.Cart">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAIAAAAABAAIAAAACAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>model\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.CartManager">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAQAAAAAgAAAAAAAAAAAoAAEAAAAAAEAAAAA=</HashCode>
+      <FileName>controller\CartManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.EntrySwitch">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Goudkoorts.Switch" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="1.241" />
+        <Point X="11.49" Y="1.241" />
+        <Point X="11.49" Y="5.059" />
+        <Point X="12.75" Y="5.059" />
+        <Point X="12.75" Y="4.819" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAIAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>model\EntrySwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.ExitSwitch">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\ExitSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.Game">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <AssociationLine Name="cartManager" Type="Goudkoorts.CartManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.375" Y="6.75" />
+        <Point X="6.375" Y="6.5" />
+        <Point X="5.958" Y="6.5" Type="JumpStart" />
+        <Point X="5.792" Y="6.5" Type="JumpEnd" />
+        <Point X="2.625" Y="6.5" />
+        <Point X="2.625" Y="8.11" />
+        <Point X="2.25" Y="8.11" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="switchManager" Type="Goudkoorts.SwitchManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.438" Y="10.037" />
+        <Point X="6.438" Y="10.286" />
+        <Point X="6" Y="10.286" />
+        <Point X="6" Y="8.295" />
+        <Point X="5" Y="8.295" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="shipManager" Type="Goudkoorts.ShipManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="8.212" />
+        <Point X="5.875" Y="8.212" />
+        <Point X="5.875" Y="5.042" />
+        <Point X="4" Y="5.042" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="mapView" Type="Goudkoorts.MapView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="6.75" />
+        <Point X="6.75" Y="6.579" />
+        <Point X="6.688" Y="6.579" />
+        <Point X="6.688" Y="1.994" />
+        <Point X="6.583" Y="1.994" Type="JumpStart" />
+        <Point X="6.417" Y="1.994" Type="JumpEnd" />
+        <Point X="4.25" Y="1.994" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAJAEAAAAAAAAIIAQAAYAAAAAAggCQAAIAASAAAAAAA=</HashCode>
+      <FileName>controller\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="map" />
+      <Field Name="cartManager" />
+      <Field Name="switchManager" />
+      <Field Name="shipManager" />
+      <Field Name="messageView" />
+      <Field Name="mapView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Goudkoorts.Map">
+    <Position X="8.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAoAAAAAACAAAAAAAAACAAAAAAgAAA=</HashCode>
+      <FileName>model\Map.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="field" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Goudkoorts.Road" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <AssociationLine Name="cart" Type="Goudkoorts.Cart" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.25" Y="3.688" />
+        <Point X="8.938" Y="3.688" />
+        <Point X="8.938" Y="2.734" />
+        <Point X="7.583" Y="2.734" Type="JumpStart" />
+        <Point X="7.417" Y="2.734" Type="JumpEnd" />
+        <Point X="6.771" Y="2.734" Type="JumpStart" />
+        <Point X="6.604" Y="2.734" Type="JumpEnd" />
+        <Point X="6.375" Y="2.734" />
+        <Point X="6.375" Y="5.259" />
+        <Point X="6.75" Y="5.259" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAA=</HashCode>
+      <FileName>model\Road.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="ship" />
+      <Property Name="next" />
+      <Property Name="cart" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Goudkoorts.Ship">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAAAAIAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.Switch">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>model\Switch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.Yard" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\Yard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.End">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Goudkoorts.Road" ManuallyRouted="true">
+      <Path>
+        <Point X="7.5" Y="3.25" />
+        <Point X="7.5" Y="2.316" />
+        <Point X="6.771" Y="2.316" Type="JumpStart" />
+        <Point X="6.604" Y="2.316" Type="JumpEnd" />
+        <Point X="6.5" Y="2.316" />
+        <Point X="6.5" Y="1.733" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\End.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.SwitchManager">
+    <Position X="3.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\SwitchManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.MessageView">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQEAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>view\MessageView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.MapView">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>view\MapView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goudkoorts.ShipManager">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAgAAAAAAAAAAAAgAAAAAAAAAAgAABAAAAAAA=</HashCode>
+      <FileName>controller\ShipManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
